@@ -38,6 +38,11 @@
 						<label for="inputEmail4">E-mail</label> <input type="email"
 							class="form-control" name="email" id="inputEmail4" placeholder="E-mail">
 					</div>
+					
+					<div class="form-group">
+						<label for="inputEmail4">CPF</label> <input type="text"
+							class="form-control" name="cpf" id="inputEmail4" placeholder="cpf">
+					</div>
 
 					<div class="form-row">
 						<div class="form-group col-md-6">

@@ -45,6 +45,7 @@ public class CadastroServlet extends HttpServlet {
 		usuario.setEndereco(request.getParameter("endereco"));
 		usuario.setCidade(request.getParameter("cidade"));
 		usuario.setEstado(request.getParameter("estado"));
+		usuario.setCpf(request.getParameter("cpf"));
 		
 		UsuarioDAO usuarioDAO = new UsuarioDAO();
 		usuarioDAO.salvar(usuario);
