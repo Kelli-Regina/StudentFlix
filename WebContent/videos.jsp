@@ -11,7 +11,17 @@
 <script src="js/index.js"></script>
 </head>
 <body>
+		<div class="fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-light bg-header">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<div class="navbar-nav">
+						<a class="nav-item nav-link" href="perfilUsuario.jsp?cpf=<%= request.getAttribute("cpfusuario") %>&nome=<%= request.getAttribute("nomeUsuario") %>">Perfil usuário</a> 
+					</div>
+				</div>
+			</nav>
+		</div>
 	<div class="contain">
+	
 		<a href="/studentflix"> <image src="imagens/logo.png"></a>
 
 		<div class="slider">

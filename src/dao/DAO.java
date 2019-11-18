@@ -4,6 +4,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
+@org.hibernate.annotations.Entity(dynamicInsert = true, dynamicUpdate = true)
+
 public class DAO {
 
 	protected DAO() {

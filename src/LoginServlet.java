@@ -1,7 +1,6 @@
 
 import java.io.IOException;
-
-
+import java.util.UUID;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -51,6 +50,10 @@ public class LoginServlet extends HttpServlet {
 		UsuarioDAO usuarioDAO = new UsuarioDAO();
 		Usuario usuarioEncontrado = usuarioDAO.findByCpfAndSenha(usuario.getEmail(), usuario.getSenha());
 		if (usuarioEncontrado != null) {
+			String cpf = usuario.getCpf();
+			request.setAttribute("cpfusuario", usuarioEncontrado.getCpf());
+			request.setAttribute("nomeUsuario", usuarioEncontrado.getNome());
+			
 			request.getRequestDispatcher("/videos.jsp").forward(request, response);
 		}else {
 			request.getRequestDispatcher("/login.jsp").forward(request, response);
